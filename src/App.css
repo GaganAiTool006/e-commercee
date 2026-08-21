@@ -225,8 +225,100 @@ ul { list-style: none; }
   padding: 0 8px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
+
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.hero-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 48px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, transparent 70%);
+}
+.hero-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.hero-sub {
+  font-size: 18px;
+  color: #f3f4f6;
+  margin-bottom: 20px;
+}
+.hero-btn {
+  background: #7e22ce;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 28px;
+  border-radius: 6px;
+  width: fit-content;
+  transition: background 0.2s;
+}
+.hero-btn:hover { background: #6b21a8; }
+
+/* Section */
+.home-section {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  padding: 20px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 12px;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+.section-view-all {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7e22ce;
+  transition: color 0.2s;
+}
+.section-view-all:hover { color: #6b21a8; }
+
+/* Home Product Grid */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.home-grid-item {
+  border: 1px solid #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.home-grid-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Old scroll row kept for reference */
 .product-scroll-section {
   background: #fff;
   border-radius: 4px;
