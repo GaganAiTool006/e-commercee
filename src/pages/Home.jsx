@@ -1,7 +1,4 @@
-import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
-
 import mouseImg from '../assets/images/mouse.svg';
 import phoneImg from '../assets/images/phone.svg';
 import cleanserImg from '../assets/images/cleanser.svg';
@@ -15,13 +12,15 @@ const featuredProducts = [
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-2 lg:px-4 pb-8 space-y-4 max-w-7xl pt-2">
-      <div className="bg-white p-4 flex gap-4 overflow-x-auto no-scrollbar shadow-sm rounded-md border border-gray-100">
-        {featuredProducts.map((product) => (
-          <div key={product.id} className="min-w-[200px] w-[200px] shrink-0">
-            <ProductCard {...product} />
-          </div>
-        ))}
+    <div className="home-wrap">
+      <div className="product-scroll-section">
+        <div className="product-scroll-row">
+          {featuredProducts.map((product) => (
+            <div key={product.id} className="product-scroll-item">
+              <ProductCard {...product} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
